@@ -17,9 +17,11 @@ items.forEach((t) => {
 const span = document.querySelectorAll('span');
 
 span.forEach((s) => {
-  s.addEventListener('click', () => {
-    const ul = s.nextElementSibling;
+  const ul = s.nextElementSibling;
 
+  ul.style.display = 'none';
+
+  s.addEventListener('click', () => {
     ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
   });
 });
